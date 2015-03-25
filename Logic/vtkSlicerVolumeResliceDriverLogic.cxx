@@ -427,12 +427,12 @@ void vtkSlicerVolumeResliceDriverLogic
   rtimgTransform->SetElement(0, 0, ntx);
   rtimgTransform->SetElement(1, 0, nty);
   rtimgTransform->SetElement(2, 0, ntz);
-  rtimgTransform->SetElement(0, 1, nsx);
-  rtimgTransform->SetElement(1, 1, nsy);
-  rtimgTransform->SetElement(2, 1, nsz);
-  rtimgTransform->SetElement(0, 2, nnx);
-  rtimgTransform->SetElement(1, 2, nny);
-  rtimgTransform->SetElement(2, 2, nnz);
+  rtimgTransform->SetElement(0, 1, -nsx);
+  rtimgTransform->SetElement(1, 1, -nsy);
+  rtimgTransform->SetElement(2, 1, -nsz);
+  rtimgTransform->SetElement(0, 2, -nnx);
+  rtimgTransform->SetElement(1, 2, -nny);
+  rtimgTransform->SetElement(2, 2, -nnz);
   rtimgTransform->SetElement(0, 3, px + cx);
   rtimgTransform->SetElement(1, 3, py + cy);
   rtimgTransform->SetElement(2, 3, pz + cz);
